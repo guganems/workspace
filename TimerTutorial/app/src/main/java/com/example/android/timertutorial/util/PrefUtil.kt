@@ -40,7 +40,7 @@ class PrefUtil {
             editor.apply()
         }
 
-        private const val SECONDS_REMAINING_ID = "com.example.timer.previous_timer_length"
+        private const val SECONDS_REMAINING_ID = "com.example.timer.seconds_remaining"
 
         fun getSecondsRemaining(context: Context): Long{
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
