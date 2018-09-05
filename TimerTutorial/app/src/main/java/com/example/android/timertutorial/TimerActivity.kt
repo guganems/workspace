@@ -9,6 +9,7 @@ import android.view.MenuItem
 import com.example.android.timertutorial.util.PrefUtil
 
 import kotlinx.android.synthetic.main.activity_timer.*
+import kotlinx.android.synthetic.main.content_timer.*
 import java.util.*
 
 class TimerActivity : AppCompatActivity() {
@@ -87,6 +88,84 @@ class TimerActivity : AppCompatActivity() {
             PrefUtil.getSecondsRemaining(this)
         else
             timerLengthSeconds
+
+        //TODO: change secondsRemaining according to where the background timer stopped
+
+        //resume where we left of
+        if(timerState == TimerState.Running){
+            startTimer()
+        }
+
+        updateButtons()
+        updateCountDownUI()
+    }
+
+    private fun onTimerFinished(){
+        timerState = TimerState.Stopped
+
+        setNewTimerLength()
+
+        progress_countdown.progress = 0
+
+        PrefUtil.setSecondsRemaining(timerLengthSeconds, this)
+        secondsRemaining = timerLengthSeconds
+
+        updateButtons()
+        updateCountDownUI()
+    }
+
+    private fun startTimer(){
+        timerState = TimerState.Running
+
+        timer = object : CountDownTimer(secondsRemaining * 1000, 100){
+            override fun onFinish() = onTimerFinished()
+
+            override fun onTick(millisUntilFinished: Long) {
+                secondsRemaining = millisUntilFinished / 1000
+                updateCountDownUI()
+            }
+        }.start()
+    }
+
+    private fun setNewTimerLength(){
+        val lengthInMinutes = PrefUtil.getTimerLength(this)
+        timerLengthSeconds = (lengthInMinutes * 60L)
+        progress_countdown.max = timerLengthSeconds.toInt()
+    }
+
+    private fun setPreviousTimerLength(){
+        timerLengthSeconds = PrefUtil.getPreviousTimerLengthSeconds(this)
+        progress_countdown.max = timerLengthSeconds.toInt()
+    }
+
+    private fun updateCountDownUI(){
+        val minutesUntilFinished = secondsRemaining / 60
+        val secondsInMinutesUntilFinished = secondsRemaining - minutesUntilFinished * 60
+        val secondsStr = secondsInMinutesUntilFinished.toString()
+        textview_countdown.text = "$minutesUntilFinished:${
+        if(secondsStr.length == 2) secondsStr
+        else "0" + secondsStr}"
+        progress_countdown.progress = (timerLengthSeconds - secondsRemaining).toInt()
+    }
+
+    private fun updateButtons(){
+        when(timerState){
+            TimerState.Running ->{
+                fab_start.isEnabled = false
+                fab_pause.isEnabled = true
+                fab_stop.isEnabled = true
+            }
+            TimerState.Stopped ->{
+                fab_start.isEnabled = true
+                fab_pause.isEnabled = false
+                fab_stop.isEnabled = false
+            }
+            TimerState.Paused ->{
+                fab_start.isEnabled = true
+                fab_pause.isEnabled = false
+                fab_stop.isEnabled = true
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
