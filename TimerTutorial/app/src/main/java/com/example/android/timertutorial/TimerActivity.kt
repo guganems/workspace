@@ -25,7 +25,16 @@ class TimerActivity : AppCompatActivity() {
             val intent = Intent(context, TimerExpiredReceiver::class.java)
             val pendingIntent = PendingIntent.getBroadcast(context, 0, intent,0)
             alarmManager.setExact(AlarmManager.RTC_WAKEUP, wakeUpTime, pendingIntent)
-            PrefUtil.setAlarmSetTime()
+            PrefUtil.setAlarmSetTime(nowSeconds, context)
+            return wakeUpTime
+        }
+
+        fun removeAlarm(context: Context){
+            val intent = Intent(context, TimerExpiredReceiver::class.java)
+            val pendingIntent = PendingIntent.getBroadcast(context, 0, intent,0)
+            val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+            alarmManager.cancel(pendingIntent)
+            PrefUtil.setAlarmSetTime(0, context)
         }
 
         val nowSeconds: Long
@@ -73,7 +82,8 @@ class TimerActivity : AppCompatActivity() {
 
         initTimer()
 
-        //TODO: remove background timer, hide notification
+        removeAlarm(this)
+        //TODO: hide notification
     }
 
     override fun onPause() {
@@ -81,7 +91,8 @@ class TimerActivity : AppCompatActivity() {
 
         if (timerState == TimerState.Running){
             timer.cancel()
-            //TODO: start background timer and show notification
+            val wakeUpTime = setAlarm(this, nowSeconds, secondsRemaining)
+            //TODO: show notification
         }
         else if(timerState == TimerState.Paused){
             //TODO: show notification
@@ -107,10 +118,15 @@ class TimerActivity : AppCompatActivity() {
         else
             timerLengthSeconds
 
-        //TODO: change secondsRemaining according to where the background timer stopped
+        val alarmSetTime = PrefUtil.getAlarmSetTime(this)
+        if(alarmSetTime > 0){
+            secondsRemaining -= nowSeconds - alarmSetTime
+        }
 
-        //resume where we left of
-        if(timerState == TimerState.Running){
+        if(secondsRemaining <= 0){
+            onTimerFinished()
+        }
+        else if(timerState == TimerState.Running){
             startTimer()
         }
 
