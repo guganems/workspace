@@ -5,7 +5,9 @@ import android.graphics.Color
 import android.os.Build
 import android.view.Gravity
 import android.view.View
+import android.widget.Button
 import org.jetbrains.anko.*
+import org.jetbrains.anko.design.longSnackbar
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
 class MainActivityUI : AnkoComponent<MainActivity> {
@@ -26,6 +28,23 @@ class MainActivityUI : AnkoComponent<MainActivity> {
                 }
             }.lparams(dip(72), dip(72)){
                 gravity = Gravity.CENTER
+            }
+
+            linearLayout {
+                button("Show Toast"){
+                    onClick {
+                        toast(textField.text)
+                    }
+                }
+
+                button("Show snackbar"){
+                    onClick {
+                        longSnackbar(this@frameLayout, textField.text.toString())
+                    }
+                }
+            }.lparams{
+                gravity = Gravity.BOTTOM or Gravity.CENTER_HORIZONTAL
+                bottomMargin = dip(72)
             }
         }
     }
