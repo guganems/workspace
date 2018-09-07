@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.android.firemessage.util.FirestoreUtil
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.ErrorCodes
 import com.firebase.ui.auth.IdpResponse
@@ -42,9 +43,10 @@ class SignInActivity : AppCompatActivity() {
 
             if (resultCode == Activity.RESULT_OK){
                 val progressDialog = indeterminateProgressDialog("Setting up your account")
-                //TODO: Initialize current user in firestore
-                startActivity(intentFor<MainActivity>().newTask().clearTask())
-                progressDialog.dismiss()
+                FirestoreUtil.initCurrentUserIfFirstTime {
+                    startActivity(intentFor<MainActivity>().newTask().clearTask())
+                    progressDialog.dismiss()
+                }
             }
             else if (resultCode == Activity.RESULT_CANCELED){
                 if (responce == null){
