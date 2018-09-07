@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.app.AppCompatDialogFragment
+import com.example.android.firemessage.fragment.MyAccountFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.Android
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_my_account ->{
+                    replaceFragment(MyAccountFragment())
                     true
                 }
                 else -> {
@@ -31,9 +34,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun replaceFragment(fragment: Fragment){
+    private fun replaceFragment(fragment: android.support.v4.app.Fragment){
         supportFragmentManager.beginTransaction().apply {
-            replace()
+            replace(R.id.fragment_layout, fragment)
+            commit()
         }
     }
 }
