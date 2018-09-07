@@ -63,7 +63,7 @@ dependencies {
         }
     }
 
-    androidExtensions{
+    androidExtensions {
         experimental = true
     }
 }

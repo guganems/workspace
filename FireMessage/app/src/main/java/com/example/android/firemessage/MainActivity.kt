@@ -6,6 +6,7 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.app.AppCompatDialogFragment
 import com.example.android.firemessage.fragment.MyAccountFragment
+import com.example.android.firemessage.fragment.PeopleFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.Android
 
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         navigation.setOnNavigationItemSelectedListener{
             when (it.itemId){
                 R.id.navigation_people ->{
-                    //TODO: show people fragment
+                    replaceFragment(PeopleFragment())
                     true
                 }
                 R.id.navigation_my_account ->{
@@ -35,9 +36,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun replaceFragment(fragment: android.support.v4.app.Fragment){
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragment_layout, fragment)
-            commit()
-        }
+        supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_layout, fragment)
+                .commit()
     }
 }
