@@ -17,6 +17,8 @@ object FirestoreUtil {
         get() = firestoreInstance.document("users/${FirebaseAuth.getInstance().currentUser?.uid
             ?: throw NullPointerException("UID is null.")}")
 
+    private val chatChannelsCollectionRef = firestoreInstance.collection("chatChannels")
+
     fun initCurrentUserIfFirstTime(onComplete: () -> Unit){
         currentUserDocRef.get().addOnSuccessListener { documentSnapshot ->
             if(!documentSnapshot.exists()){
@@ -73,4 +75,15 @@ object FirestoreUtil {
     }
 
     fun removeListener(registration: ListenerRegistration) = registration.remove()
+
+    fun getOrCreateChatChannel(otherUserId: String,
+                               onComplete: (channelId: String) -> Unit){
+        currentUserDocRef.collection("engagedChatChannels")
+                .document(otherUserId).get().addOnSuccessListener {
+                    if(it.exists()){
+                        onComplete(it["channelId"] as String)
+                        return@addOnSuccessListener
+                    }
+                }
+    }
 }
