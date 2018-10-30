@@ -2,8 +2,12 @@ package com.example.android.firemessage.util
 
 import android.content.Context
 import android.util.Log
+import com.example.android.firemessage.model.ChatChannel
+import com.example.android.firemessage.model.MessageType
+import com.example.android.firemessage.model.TextMessage
 import com.example.android.firemessage.model.User
 import com.example.android.firemessage.recyclerview.item.PersonItem
+import com.example.android.firemessage.recyclerview.item.TextMessageItem
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
@@ -84,6 +88,45 @@ object FirestoreUtil {
                         onComplete(it["channelId"] as String)
                         return@addOnSuccessListener
                     }
+
+                    val currentUserId = FirebaseAuth.getInstance().currentUser!!.uid
+                    val newChannel = chatChannelsCollectionRef.document()
+                    newChannel.set(ChatChannel(mutableListOf(currentUserId, otherUserId)))
+
+                    currentUserDocRef
+                            .collection("engagedChatChannels")
+                            .document(otherUserId)
+                            .set(mapOf("channelId" to newChannel.id))
+
+                    firestoreInstance.collection("users").document(otherUserId)
+                            .collection("engagedChatChannels")
+                            .document(currentUserId)
+                            .set(mapOf("channelId" to newChannel.id))
+
+                    onComplete(newChannel.id)
+                }
+    }
+
+    fun addChatMessagesListener(channelId: String, context: Context,
+                                onListen: (List<Item>) -> Unit): ListenerRegistration{
+        return chatChannelsCollectionRef.document(channelId).collection("messages")
+                .orderBy("time")
+                .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+                    if(firebaseFirestoreException != null){
+                        Log.e("FIRESTORE", "ChatMessageListener error.", firebaseFirestoreException)
+                        return@addSnapshotListener
+                    }
+
+                    val items = mutableListOf<Item>()
+                    querySnapshot!!.documents.forEach {
+                        if(it["type"] == MessageType.TEXT){
+                            items.add(TextMessageItem(it.toObject(TextMessage::class.java), context))
+                        }
+                        else{
+                            //TODO: add image message
+                        }
+                    }
+                    onListen(items)
                 }
     }
 }
