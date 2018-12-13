@@ -2,4 +2,13 @@
     <string name="app_name">Lesson 01</string>
     <string name="btn_click">clicked</string>
     <string name="long_click">long clicked</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="languages_known">Languages Known</string>
+    <string name="english">English</string>
+    <string name="georgian">Georgian</string>
+    <string name="megrelian">Megrelian</string>
+    <string name="submit">Submit</string>
+    <string name="hi">Hi</string>
 </resources>
