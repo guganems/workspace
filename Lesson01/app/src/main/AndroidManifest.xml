@@ -12,7 +12,8 @@
         <activity android:name=".MainActivity"/>
         <activity android:name=".ButtonActivity"/>
         <activity android:name=".FormActivity"/>
-        <activity android:name=".EditTextActivity">
+        <activity android:name=".EditTextActivity"/>
+        <activity android:name=".SpinnerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
