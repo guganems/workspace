@@ -8,7 +8,7 @@ import android.widget.TextView
 
 class EditTextActivity : AppCompatActivity() {
 
-    lateinit var editText: EditText
+    private lateinit var editText: EditText
     private lateinit var result: TextView
     private lateinit var copy : Button
 
@@ -16,7 +16,7 @@ class EditTextActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_text)
 
-        editText = findViewById(R.id.edittext)
+        editText = findViewById(R.id.editText)
         result = findViewById(R.id.tv_result)
         copy = findViewById(R.id.btn_copy)
 

@@ -9,11 +9,11 @@
 
     <EditText android:layout_width="match_parent"
               android:gravity="center"
-              android:id="@+id/editText"
+              android:id="@+id/edittext"
               android:hint="@string/hint"
               android:autofillHints="@string/another_hint"
               android:inputType="text"
-              android:layout_height="wrap_content" tools:targetApi="o"/>
+              android:layout_height="wrap_content"/>
 
     <TextView android:layout_width="match_parent"
               android:id="@+id/tv_result"
@@ -21,7 +21,7 @@
               android:layout_height="300dp"/>
 
     <Button android:layout_width="match_parent"
-            android:text="@string/copy_button"
+            android:text="copy"
             android:id="@+id/btn_copy"
             android:layout_height="wrap_content"/>
 

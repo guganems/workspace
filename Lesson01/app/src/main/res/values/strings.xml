@@ -11,4 +11,7 @@
     <string name="megrelian">Megrelian</string>
     <string name="submit">Submit</string>
     <string name="hi">Hi</string>
+    <string name="hint">This is a hint</string>
+    <string name="another_hint">say something</string>
+    <string name="copy_button">copy</string>
 </resources>
