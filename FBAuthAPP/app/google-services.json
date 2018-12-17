@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "982416371017",
+    "firebase_url": "https://androidauth-678b2.firebaseio.com",
+    "project_id": "androidauth-678b2",
+    "storage_bucket": "androidauth-678b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982416371017:android:d1c5723f5bd5a3c3",
+        "android_client_info": {
+          "package_name": "com.needletipson.guga.fbauthapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982416371017-uva9ejaiqt92mmot6bmn7kttfdmgb6mc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.needletipson.guga.fbauthapp",
+            "certificate_hash": "904fd964a8b7f75560476192c61ba01c97437ba3"
+          }
+        },
+        {
+          "client_id": "982416371017-329hpa445cdlc0l30hmg1huvf47rlct2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-ywZ-IUaPwxaNECbT496vKBxhp0dmi-Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982416371017-329hpa445cdlc0l30hmg1huvf47rlct2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
