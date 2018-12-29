@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AutoScrollTextViewExample</string>
+    <string name="scrollable_text">Guga is smart developer. Guga is smart developer. Guga is smart developer. Guga is
+        smart developer. Guga is smart developer. Guga is smart developer. Guga is smart developer. Guga is smart
+        developer. Guga is smart developer. Guga is smart developer.
+    </string>
+</resources>
