@@ -7,10 +7,10 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <TextView
+    <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/message_new"
+            android:background="@drawable/message_state"
             android:gravity="center"
             android:text="დიზ იზ გუგა\nნიგაზ ბიჩიზ!"/>
 
