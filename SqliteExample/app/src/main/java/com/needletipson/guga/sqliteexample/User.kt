@@ -11,4 +11,8 @@ class User {
         this.age = age
     }
 
+    constructor(){
+
+    }
+
 }
