@@ -7,6 +7,7 @@ import android.content.IntentFilter
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,10 +27,14 @@ class MainActivity : AppCompatActivity() {
 
         }
         registerReceiver(receiver, filter)
+
+        btn_launch.setOnClickListener({
+            sendBroadcast(Intent("MyReceiver"))
+        })
     }
 
     override fun onDestroy() {
-        unregisterReceiver(receiver)
+        unregisterReceiver(receiver )
         super.onDestroy()
     }
 }
