@@ -21,10 +21,17 @@ class MyService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         ShowLog("onStartCommand")
 
-        for (i in 1..10){
-            ShowLog("Service Doing something " + i.toString())
-            Thread.sleep(1000)
+        val runable = Runnable{
+            for (i in 1..10){
+                ShowLog("Service Doing something " + i.toString())
+                Thread.sleep(1000)
+            }
+            stopSelf()
         }
+
+        val thread = Thread(runable)
+        thread.start()
+
 
         return super.onStartCommand(intent, flags, startId)
     }
