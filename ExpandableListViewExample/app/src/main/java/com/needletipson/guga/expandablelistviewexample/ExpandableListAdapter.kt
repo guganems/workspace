@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import android.widget.TextView
+import android.widget.Toast
 
 class ExpandableListAdapter(var context : Context, var header : MutableList<String>, var body : MutableList<MutableList<String>>) : BaseExpandableListAdapter() {
     override fun getGroup(p0: Int): String {
@@ -28,6 +29,9 @@ class ExpandableListAdapter(var context : Context, var header : MutableList<Stri
         }
         val title = convertView?.findViewById<TextView>(R.id.tv_title)
         title?.text = getGroup(p0)
+        title?.setOnClickListener {
+            Toast.makeText(context, getGroup(p0), Toast.LENGTH_SHORT).show()
+        }
         return convertView
     }
 
@@ -35,7 +39,7 @@ class ExpandableListAdapter(var context : Context, var header : MutableList<Stri
         return body[p0].size
     }
 
-    override fun getChild(p0: Int, p1: Int): Any {
+    override fun getChild(p0: Int, p1: Int): String {
         return body[p0][p1]
     }
 
@@ -50,7 +54,10 @@ class ExpandableListAdapter(var context : Context, var header : MutableList<Stri
             convertView = inflater.inflate(R.layout.layout_child, null)
         }
         val title = convertView?.findViewById<TextView>(R.id.tv_title)
-        title?.text = getGroup(p0)
+        title?.text = getChild(p0, p1)
+        title?.setOnClickListener {
+            Toast.makeText(context, getChild(p0, p1), Toast.LENGTH_SHORT).show()
+        }
         return convertView
     }
 
