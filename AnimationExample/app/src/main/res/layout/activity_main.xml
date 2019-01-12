@@ -31,15 +31,13 @@
                     android:layout_weight="1"
                     android:id="@+id/fade_in"
                     android:text="Fade In"
-                    android:textAllCaps="false"
-                    android:layout_height="wrap_content"/>
+                    style="@style/action_button"/>
 
             <Button android:layout_width="0dp"
                     android:layout_weight="1"
                     android:id="@+id/fade_out"
                     android:text="Fade Out"
-                    android:textAllCaps="false"
-                    android:layout_height="wrap_content"/>
+                    style="@style/action_button"/>
 
         </LinearLayout>
 
@@ -52,15 +50,13 @@
                     android:layout_weight="1"
                     android:id="@+id/zoom_in"
                     android:text="Zoom In"
-                    android:textAllCaps="false"
-                    android:layout_height="wrap_content"/>
+                    style="@style/action_button"/>
 
             <Button android:layout_width="0dp"
                     android:layout_weight="1"
                     android:id="@+id/zoom_out"
                     android:text="Zoom Out"
-                    android:textAllCaps="false"
-                    android:layout_height="wrap_content"/>
+                    style="@style/action_button"/>
 
         </LinearLayout>
 
@@ -73,15 +69,13 @@
                     android:layout_weight="1"
                     android:id="@+id/slide_down"
                     android:text="Slide Down"
-                    android:textAllCaps="false"
-                    android:layout_height="wrap_content"/>
+                    style="@style/action_button"/>
 
             <Button android:layout_width="0dp"
                     android:layout_weight="1"
                     android:id="@+id/slide_up"
                     android:text="Slide Up"
-                    android:textAllCaps="false"
-                    android:layout_height="wrap_content"/>
+                    style="@style/action_button"/>
 
         </LinearLayout>
 
@@ -94,15 +88,13 @@
                     android:layout_weight="1"
                     android:id="@+id/bounce"
                     android:text="Bounce"
-                    android:textAllCaps="false"
-                    android:layout_height="wrap_content"/>
+                    style="@style/action_button"/>
 
             <Button android:layout_width="0dp"
                     android:layout_weight="1"
                     android:id="@+id/rotate"
-                    android:text="Rotate"
-                    android:textAllCaps="false"
-                    android:layout_height="wrap_content"/>
+                    style="@style/action_button"
+                    android:text="Rotate"/>
 
         </LinearLayout>
 
