@@ -5,10 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
+import android.widget.ExpandableListView
 import android.widget.TextView
 import android.widget.Toast
 
-class ExpandableListAdapter(var context : Context, var header : MutableList<String>, var body : MutableList<MutableList<String>>) : BaseExpandableListAdapter() {
+class ExpandableListAdapter(var context : Context, var expandableListView: ExpandableListView, var header : MutableList<String>, var body : MutableList<MutableList<String>>) : BaseExpandableListAdapter() {
     override fun getGroup(p0: Int): String {
         return header[p0]
     }
@@ -30,6 +31,10 @@ class ExpandableListAdapter(var context : Context, var header : MutableList<Stri
         val title = convertView?.findViewById<TextView>(R.id.tv_title)
         title?.text = getGroup(p0)
         title?.setOnClickListener {
+            if (expandableListView.isGroupExpanded(p0))
+                expandableListView.collapseGroup(p0)
+            else
+                expandableListView.expandGroup(p0)
             Toast.makeText(context, getGroup(p0), Toast.LENGTH_SHORT).show()
         }
         return convertView

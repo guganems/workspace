@@ -128,6 +128,6 @@ class MainActivity : AppCompatActivity() {
         body.add(season6)
         body.add(special)
 
-        expandableListView.setAdapter(ExpandableListAdapter(this, header, body))
+        expandableListView.setAdapter(ExpandableListAdapter(this, expandableListView, header, body))
     }
 }
