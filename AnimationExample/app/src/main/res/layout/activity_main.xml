@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_above="@id/btn_layout"
+        android:textStyle="bold"
+        android:id="@+id/textView"
+        android:text="Guga Nemsitsveridze"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_alignParentBottom="true"
+                  android:id="@+id/btn_layout"
+                  android:orientation="vertical"
+                  android:layout_height="wrap_content">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:weightSum="2"
+                      android:layout_height="wrap_content">
+
+            <Button android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/fade_in"
+                    android:text="Fade In"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+            <Button android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/fade_out"
+                    android:text="Fade Out"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:weightSum="2"
+                      android:layout_height="wrap_content">
+
+            <Button android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/zoom_in"
+                    android:text="Zoom In"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+            <Button android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/zoom_out"
+                    android:text="Zoom Out"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:weightSum="2"
+                      android:layout_height="wrap_content">
+
+            <Button android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/slide_down"
+                    android:text="Slide Down"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+            <Button android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/slide_up"
+                    android:text="Slide Up"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:weightSum="2"
+                      android:layout_height="wrap_content">
+
+            <Button android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/bounce"
+                    android:text="Bounce"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+            <Button android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/rotate"
+                    android:text="Rotate"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
