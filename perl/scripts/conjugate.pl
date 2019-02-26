@@ -5,6 +5,5 @@ if ($verb eq "watch") {
     print $verb . 'es';
 }
 else {
-    $verb = $verb . 's';
-    print $verb;
+    print $verb . 's';
 }
