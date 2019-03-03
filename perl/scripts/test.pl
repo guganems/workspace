@@ -1,2 +1,3 @@
-@people = ("Moe", "Larry", "Curly");
-print "$#people";
+$string = "abcdefghij";
+$howbig = length($string);
+print "$howbig\n";
