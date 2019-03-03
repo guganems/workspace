@@ -1,3 +1,3 @@
-for ($i = 0; $i <= 100; $i++){
-    print "We've reached $i\n";
-}
+$list = "Einie, meenie, miney, moe";
+@words = split(/,/, $list);
+print "$words[3]\n";
