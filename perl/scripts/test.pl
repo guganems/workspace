@@ -1,4 +1,3 @@
-%signs = ("Frank" => "Capricorn", "Amanda" => "Scorpio");
-foreach $person (sort keys %signs){
-    print "$person: $signs{$person}\n";
-}
+@numbers = ("210", "450", "333");
+push(@numbers, "990");
+print "@numbers\n";
