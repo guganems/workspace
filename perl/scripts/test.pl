@@ -1,3 +1,3 @@
-$string = "abcdefghij";
-$howbig = length($string);
-print "$howbig\n";
+@array = ("3", "40", "24", "100");
+@array = sort(@array);
+print "@array\n";
