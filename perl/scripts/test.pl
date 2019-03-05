@@ -1,3 +1,3 @@
 @numbers = ("210", "450", "333");
-push(@numbers, "990");
-print "@numbers\n";
+$last = pop(@numbers);
+print "$last\n";
