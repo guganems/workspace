@@ -1,0 +1,30 @@
+﻿  EnumSampleVS.cpp
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(31): error C2039: 'wstring': is not a member of 'std'
+  c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\predefined c++ types (compiler internal)(256): note: see declaration of 'std'
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(31): error C2065: 'wstring': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(31): error C2146: syntax error: missing ';' before identifier 'flavor'
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(31): error C2065: 'flavor': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(32): error C2039: 'wstring': is not a member of 'std'
+  c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\predefined c++ types (compiler internal)(256): note: see declaration of 'std'
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(32): error C2065: 'wstring': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(32): error C2146: syntax error: missing ';' before identifier 'color'
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(32): error C2065: 'color': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(35): error C2065: 'color': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(36): error C2065: 'color': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(37): error C2065: 'color': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(38): error C2065: 'color': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(39): error C2065: 'color': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(40): error C2065: 'color': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(41): error C2065: 'color': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(45): error C2065: 'flavor': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(46): error C2065: 'flavor': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(47): error C2065: 'flavor': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(48): error C2065: 'flavor': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(52): error C2039: 'wcout': is not a member of 'std'
+  c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\predefined c++ types (compiler internal)(256): note: see declaration of 'std'
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(52): error C2065: 'wcout': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(52): error C2065: 'flavor': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(52): error C2065: 'color': undeclared identifier
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(52): error C2039: 'endl': is not a member of 'std'
+  c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\predefined c++ types (compiler internal)(256): note: see declaration of 'std'
+c:\users\guga\desktop\guga\workspace\cpp\enumsamplevs\enumsamplevs\enumsamplevs.cpp(52): error C2065: 'endl': undeclared identifier
