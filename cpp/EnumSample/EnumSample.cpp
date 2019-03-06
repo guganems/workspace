@@ -10,20 +10,22 @@ enum Flavor : unsigned short int {
 	Mint
 };
 
+
+enum class Color {
+	Red,
+	Orange,
+	Yellow,
+	Blue,
+	Indigo,
+	Violet
+};
+
 int _pmain(int, _pchar[]) {
-	enum class Color {
-		Red,
-		Orange,
-		Yellow,
-		Blue,
-		Indigo,
-		Violet
-	};
 	
 	Flavor f = Vanilla;
 	f = Mint;
 	
-	Color c = Color::Orange;
+	Color c = Orange;
 	
 	std::wstring flavor;
 	std::wstring color;
