@@ -1,8 +1,8 @@
+#include "pch.h"
+#include "pchar.h"
 #include <iostream>
 #include <ostream>
 #include <string>
-#include "pch.h"
-#include "pchar.h"
 
 enum Flavor : unsigned short int {
 	Vanilla,
