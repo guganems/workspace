@@ -151,8 +151,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\pchar.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="pchar.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleSample.cpp" />
