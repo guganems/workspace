@@ -10,6 +10,10 @@ namespace Inventory {
 
 		~Vehicle(void);
 
+		VehicleCondition GetVehicleCondition(void) {
+			return m_condition;
+		};
+
 		void setVehicleCondition(VehicleCondition condition);
 
 		double GetBasis(void) { return m_basis; };
