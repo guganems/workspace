@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="pchar.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="InheritanceSample.cpp" />
