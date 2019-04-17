@@ -178,6 +178,34 @@ void DemonstrateVirtualInheritance(void) {
 		vC.Id() << endl <<
 		vC.VirtId() << endl <<
 		vC.B2::Id() << endl <<
+		vC.B2::VirtId() << endl <<
+		vC.B1::Id() << endl <<
+		vC.B1::VirtId() << endl <<
+		vC.A::Id() << endl <<
+		vC.A::VirtId() << endl <<
+		vC.B2::Conflict() << endl <<
+		vC.B1::Conflict() << endl <<
+		vC.GetSomeInt() << endl <<
+		endl <<
+
+		typeid(vCB2).name() << endl <<
+		vCB2.Id() << endl <<
+		vCB2.VirtId() << endl <<
+		vCB2.Conflict() << endl <<
+		endl <<
+
+		typeid(vCB1).name() << endl <<
+		vCB1.Id() << endl <<
+		vCB1.VirtId() << endl <<
+		vCB1.GetSomeInt() << endl <<
+		vCB1.Conflict() << endl <<
+		endl <<
+
+		typeid(vCA).name() << endl <<
+		vCA.Id() << endl <<
+		vCA.VirtId() << endl <<
+		vCA.GetSomeInt() << endl <<
+		endl;
 }
 
 int main()
