@@ -152,6 +152,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AbstractClassSample.cpp" />
+    <ClCompile Include="ConsoleWriteData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConsoleWriteData.h" />
+    <ClInclude Include="IWriteData.h" />
+    <ClInclude Include="pchar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
