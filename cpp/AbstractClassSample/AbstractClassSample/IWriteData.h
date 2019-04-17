@@ -1,10 +1,6 @@
 #pragma once
 
-class IWriteData {
-public:
-	IWriteData(void) { }
-	virtual ~IWriteData(void) { }
-
+__interface IWriteData {
 	virtual void Write(const wchar_t* value) = 0;
 	virtual void Write(double value) = 0;
 	virtual void Write(int value) = 0;
