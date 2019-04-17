@@ -208,7 +208,9 @@ void DemonstrateVirtualInheritance(void) {
 		endl;
 }
 
-int main()
+int _pmain(int, _pchar[])
 {
-    std::cout << "Hello World!\n"; 
+	DemonstrateNonVirtualInheritance();
+	DemonstrateVirtualInheritance();
+	return 0;
 }
