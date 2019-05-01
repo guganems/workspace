@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{2B62397B-2E0B-41C9-B1B7-5F2095CB255E}</ProjectGuid>
+    <ProjectGuid>{059E8980-4D7B-4939-AC62-2732516B1750}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>InitializationSample</RootNamespace>
+    <RootNamespace>DelegatingConstructor</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -151,13 +151,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="InitializationSample.cpp" />
+    <ClCompile Include="DelegatingConstructor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pchar.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

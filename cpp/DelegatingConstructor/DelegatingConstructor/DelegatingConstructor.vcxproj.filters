@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="InitializationSample.cpp">
+    <ClCompile Include="DelegatingConstructor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -23,10 +23,5 @@
     <ClInclude Include="pchar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".gitignore">
-      <Filter>Source Files</Filter>
-    </None>
   </ItemGroup>
 </Project>
