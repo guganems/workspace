@@ -17,7 +17,7 @@ SomeClass::SomeClass(int value) :
 	wcout <<
 		L"Creating SomeClass instance." << endl <<
 		L"StringId: " << m_stringId.c_str() << L"." << endl <<
-		L"Address is: '0x" << setw(8) << setfill(L"0") <<
+		L"Address is: '0x" << setw(8) << setfill(L'0') <<
 		hex << addr << dec << L"." << endl <<
 		L"Value is '" << m_value << L"." << endl <<
 		L"Thread ID: '" <<

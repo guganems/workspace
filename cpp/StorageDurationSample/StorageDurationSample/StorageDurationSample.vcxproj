@@ -151,7 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="SomeClass.cpp" />
     <ClCompile Include="StorageDurationSample.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pchar.h" />
+    <ClInclude Include="SomeClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
