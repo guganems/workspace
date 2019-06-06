@@ -18,5 +18,22 @@
     <ClCompile Include="ConstructorsSample.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IceCreamSundae.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pchar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Flavor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Toppings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IceCreamSundae.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

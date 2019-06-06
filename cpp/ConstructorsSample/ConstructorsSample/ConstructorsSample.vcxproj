@@ -152,6 +152,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConstructorsSample.cpp" />
+    <ClCompile Include="IceCreamSundae.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Flavor.h" />
+    <ClInclude Include="IceCreamSundae.h" />
+    <ClInclude Include="pchar.h" />
+    <ClInclude Include="Toppings.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
