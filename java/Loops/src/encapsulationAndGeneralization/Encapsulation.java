@@ -12,7 +12,7 @@ public class Encapsulation {
     private static void printTable(int rows) {
         int i = 1;
         while (i <= rows) {
-            printRow(i, rows);
+            printRow(i, i);
             i = i + 1;
         }
     }
