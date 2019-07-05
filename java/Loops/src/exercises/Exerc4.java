@@ -9,7 +9,7 @@ public class Exerc4 {
         System.out.println(factorial(n));
     }
 
-    private static int factorial (int n) {
+    public static int factorial (double n) {
         int fact = 1;
         for (int i = 1; i <= n; i ++) {
             fact *= i;
