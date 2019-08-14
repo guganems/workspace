@@ -14,4 +14,13 @@ public class Card {
     public String toString() {
         return RANKS[this.rank] + " of " + SUITS[this.suit];
     }
+    public int compareTo(Card that) {
+        if (this.suit < that.suit) {
+            return -1;
+        }
+        if (this.suit > that.suit) {
+            return 1;
+        }
+        return Integer.compare(this.rank, that.rank);
+    }
 }
