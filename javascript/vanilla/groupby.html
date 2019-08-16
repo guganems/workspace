@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const products = [
+  {
+    category: "Sporting Goods",
+    price: "$49.99",
+    stocked: true,
+    name: "Football"
+  },
+  {
+    category: "Sporting Goods",
+    price: "$9.99",
+    stocked: true,
+    name: "Baseball"
+  },
+  {
+    category: "Sporting Goods",
+    price: "$29.99",
+    stocked: false,
+    name: "Basketball"
+  },
+  {
+    category: "Electronics",
+    price: "$99.99",
+    stocked: true,
+    name: "iPod Touch"
+  },
+  {
+    category: "Electronics",
+    price: "$399.99",
+    stocked: false,
+    name: "iPhone 5"
+  },
+  { category: "Electronics", price: "$199.99", stocked: true, name: "Nexus 7" }
+];
+
+const output = Object.values(
+  products.reduce((a, { category, ...item }) => {
+    if (!a[category]) {
+      a[category] = { category, products: [] };
+    }
+    a[category].products.push(item);
+    return a;
+  }, {})
+);
+console.log(output);
+    </script>
+</body>
+</html>
