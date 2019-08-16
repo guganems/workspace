@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <section onclick="dosomething(this, event)">
+        <div slot="header" class="collapse-header">
+          <div class="collapse-image"></div>
+          <div class="collapse-text-price-container">
+            <div class="collapse-text">სასაჩუქრე ბარათი 200 ლარი – ტანსაცმლის მაღაზია ZURA & SHARK</div>
+            <div minprice="1200"></div>
+          </div>
+          <div class="center-item-container">
+            <div class="status success-status">წაღებული</div>
+          </div>
+          <div class="center-item-container">
+            <div class="date-text">10 იან, 2018</div>
+          </div>
+          <div class="center-item-container">
+            <iron-icon class="icon" icon="bog:chevron-down"></iron-icon>
+          </div>
+        </div>
+        <div slot="body" class="collapse-body">
+          <div>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</div>
+        </div>
+      </section>
+
+      <script>
+          function dosomething(me, e) {
+            console.log(me); // returns the section, which was clicked
+            console.log(e.target); // returns the element, which was clicked
+          }
+      </script>
+</body>
+</html>
