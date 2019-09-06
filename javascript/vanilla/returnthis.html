@@ -7,8 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+    <button class="getID">CLICK ME!</button>
     <script>
-        (function() { return "dasd"; })
+        var idPost = document.getElementsByClassName("getID")[0];
+        idPost.onclick = function() {
+            let id = "<?php echo $id; ?>";
+            location.href = `?id=${id}`;
+        }
     </script>
 </body>
 </html>
